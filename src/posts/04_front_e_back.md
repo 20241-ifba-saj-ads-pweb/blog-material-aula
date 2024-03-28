@@ -82,8 +82,8 @@ public class Main {
     }
 
     private void buscarProdutos(RoutingContext context) {
-        String categoria = Optional.ofNullable(context.request().getParam("categoria")).orElse("TV");
-        String marca = Optional.ofNullable(context.request().getParam("marca")).orElse("Samsung");
+        Optional<String> categoria = Optional.ofNullable(context.request().getParam("categoria"));
+        Optional<String> marca = Optional.ofNullable(context.request().getParam("marca"));
 
         // Lógica para buscar produtos no banco de dados
         // (Normalmente, isso envolveria consultar um banco de dados real)
@@ -95,9 +95,9 @@ public class Main {
                 new Produto(2, "TV Samsung 50 polegadas","TV", "Samsung", 2500.00)
             );
         produtos.stream()
-                    .filter(p -> p.categoria().equals(categoria) && p.marca().equals(marca))
-                    .findAny()
-                    .map(p -> jsonreturn.add(new JsonObject(Json.encode(p))));
+                    .filter(p -> categoria.isPresent() ?  p.categoria().equals(categoria.get()) : true)
+                    .filter(p -> marca.isPresent() ? p.marca().equals(marca.get()) : true)
+                    .forEach(p -> jsonreturn.add(new JsonObject(Json.encode(p))));
 
         context.response()
                 .putHeader("Content-Type", "application/json")
