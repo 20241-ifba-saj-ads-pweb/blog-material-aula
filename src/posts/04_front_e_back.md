@@ -43,17 +43,29 @@ function buscarProdutos() {
 ```java
 package br.edu.ifba.saj.ads.pweb;
 
+import java.util.List;
+import java.util.Optional;
+
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import io.quarkus.runtime.Quarkus;
 import io.quarkus.runtime.Startup;
 import io.quarkus.runtime.annotations.QuarkusMain;
 import io.vertx.core.Vertx;
+import io.vertx.core.json.Json;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.ext.web.Router;
 import io.vertx.ext.web.RoutingContext;
 
+
+
 @QuarkusMain
 public class Main {
+    
+    @JsonSerialize
+    public record Produto(Integer id, String nome, String categoria, String marca, Double preco) {}
+
 
     public static void main(String[] args) {
         Quarkus.run(args);
@@ -70,19 +82,26 @@ public class Main {
     }
 
     private void buscarProdutos(RoutingContext context) {
-        String categoria = context.request().getParam("categoria");
-        String marca = context.request().getParam("marca");
+        String categoria = Optional.ofNullable(context.request().getParam("categoria")).orElse("TV");
+        String marca = Optional.ofNullable(context.request().getParam("marca")).orElse("Samsung");
 
         // Lógica para buscar produtos no banco de dados
         // (Normalmente, isso envolveria consultar um banco de dados real)
 
-        JsonArray produtos = new JsonArray()
-                .add(new JsonObject().put("id", 1).put("nome", "Smartphone Samsung Galaxy S20").put("preco", 3500.00))
-                .add(new JsonObject().put("id", 2).put("nome", "TV Samsung 50 polegadas").put("preco", 2500.00));
+        JsonArray jsonreturn = new JsonArray();
+        
+        List<Produto> produtos =  List.of(
+                new Produto(1, "Smartphone Samsung Galaxy S20","Smartphone", "Samsung", 3500.00), 
+                new Produto(2, "TV Samsung 50 polegadas","TV", "Samsung", 2500.00)
+            );
+        produtos.stream()
+                    .filter(p -> p.categoria().equals(categoria) && p.marca().equals(marca))
+                    .findAny()
+                    .map(p -> jsonreturn.add(new JsonObject(Json.encode(p))));
 
         context.response()
                 .putHeader("Content-Type", "application/json")
-                .end(produtos.encode());
+                .end(jsonreturn.encode());
     }
 }
 ```
@@ -136,6 +155,10 @@ pom.xml
         <dependency>
             <groupId>org.apache.camel.quarkus</groupId>
             <artifactId>camel-quarkus-smallrye-reactive-messaging</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-jackson</artifactId>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
@@ -218,4 +241,5 @@ pom.xml
         </profile>
     </profiles>
 </project>
+
 ```
