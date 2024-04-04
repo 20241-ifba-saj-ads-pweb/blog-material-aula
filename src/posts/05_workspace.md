@@ -45,9 +45,16 @@ sdk install quarkus
 
 ## code.quarkus
 
-https://code.quarkus.io/
+[https://code.quarkus.io/](https://code.quarkus.io/)
 
-- selecionar a extensão **RESTEasy Reactive**
+- selecionar a extensão **REST**
+- selecionar a extensão **REST Jackson**
 - selecionar java 21
 - clicar em "Generate your application"
 - fazer o download
+
+
+## Server REST JSON HTML demo
+
+[https://github.com/20241-ifba-saj-ads-pweb/javarestserver](https://github.com/20241-ifba-saj-ads-pweb/javarestserver)
+
