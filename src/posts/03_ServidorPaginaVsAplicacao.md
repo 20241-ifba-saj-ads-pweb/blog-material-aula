@@ -127,7 +127,7 @@ https://www.exemplo.com/busca?q=termo
 URL com Fragmento:
 ```bash
 
-https://www.exemplo.com/pagina1/#secao3
+https://www.exemplo.com/pagina1#secao3
 ```
 
 

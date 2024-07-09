@@ -10,6 +10,10 @@ tag:
 ---
 # Workspace
 
+::: tabs
+
+@tab Linux
+
 ## Sdkman
 
 
@@ -42,6 +46,43 @@ sdk install maven
 ```bash
 sdk install quarkus
 ```
+
+@tab Windows
+
+## scoop
+
+
+PowerShell terminal
+
+```bash
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+```
+
+## Java
+
+```bash
+scoop bucket add java
+scoop install java/temurin-jdk
+```
+
+## maven
+
+```bash
+scoop bucket add main
+scoop install main/maven
+```
+
+## quarkus
+
+```bash
+scoop bucket add main
+scoop install main/quarkus-cli
+```
+
+
+:::
+
 
 ## code.quarkus
 
