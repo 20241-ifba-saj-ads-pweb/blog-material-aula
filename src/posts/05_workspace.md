@@ -7,6 +7,7 @@ tag:
   - sdkman
   - mvn
   - quarkus
+order: 4
 ---
 # Workspace
 
@@ -47,7 +48,7 @@ sdk install maven
 sdk install quarkus
 ```
 
-@tab Windows
+@tab:active Windows
 
 ## scoop
 
@@ -57,6 +58,21 @@ PowerShell terminal
 ```bash
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+```
+
+## Git
+
+```bash
+scoop bucket add main
+scoop install main/git
+scoop install main/gh
+```
+
+## curl
+
+```bash
+scoop bucket add main
+scoop install main/curl
 ```
 
 ## Java

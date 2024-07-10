@@ -7,7 +7,7 @@ tag:
   - url
   - front
   - back
-order: 2
+order: 3
 ---
 # Busca de Produtos em um E-commerce
 
