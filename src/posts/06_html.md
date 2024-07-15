@@ -14,3 +14,7 @@ order: 5
 - [HTML básico mozilla](https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics)
 
 - [Semântica mozilla](https://developer.mozilla.org/pt-BR/docs/Glossary/Semantics)
+
+## Exercício
+
+[https://classroom.github.com/a/tHwtKVx3](https://classroom.github.com/a/tHwtKVx3)
