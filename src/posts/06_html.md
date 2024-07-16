@@ -9,7 +9,12 @@ order: 5
 ---
 # Introdução a HTML
 
-[https://www.w3schools.com/html/default.asp](https://www.w3schools.com/html/default.asp)
+- [HTML Tutorial w3schools](https://www.w3schools.com/html/default.asp)
 
+- [HTML básico mozilla](https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics)
 
-[https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics](https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- [Semântica mozilla](https://developer.mozilla.org/pt-BR/docs/Glossary/Semantics)
+
+## Exercício
+
+[https://classroom.github.com/a/tHwtKVx3](https://classroom.github.com/a/tHwtKVx3)
