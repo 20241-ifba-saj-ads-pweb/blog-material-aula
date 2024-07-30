@@ -9,4 +9,4 @@ order: 9
 ---
 # Web Component
 
-[entrega](https://classroom.github.com/a/IJhcnAbq)
+[https://classroom.github.com/a/iK-NM1fo](https://classroom.github.com/a/iK-NM1fo)
