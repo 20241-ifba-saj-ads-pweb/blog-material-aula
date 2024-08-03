@@ -24,3 +24,8 @@ order: 8
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gfvFEBXMVSU?si=IspleqJCBxpafgyq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 [https://github.com/FullstackSimplified/html-web-components](https://github.com/FullstackSimplified/html-web-components)
+
+
+## Publicando um web component
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vakoopKxV0k?si=aNxVmK4DCSc3bU5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
