@@ -42,4 +42,7 @@ order: 9
 @[code](./code/web-component/meu-html/js/lib.js)
 
 
+## criando elementos customizados 
+
+https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements
 
