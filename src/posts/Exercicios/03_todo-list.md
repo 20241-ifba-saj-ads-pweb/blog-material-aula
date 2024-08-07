@@ -13,4 +13,4 @@ order: 3
   - deve ter um inputpara o usuário escrever o nome da tarefa e um botão para adicionar a tarefa na lista;
   - cada tarefa deve ter um ícone de ação para remover a tarefa da lista.
 
-[Entrega]
+[Entrega](https://classroom.github.com/a/QyqCm_4H)
