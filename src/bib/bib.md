@@ -61,3 +61,15 @@
 
 [^w3schools_from]: w3schools FORM [https://www.w3schools.com/html/html_forms.asp](https://www.w3schools.com/html/html_forms.asp)
 
+
+
+[^REST]:Roy Thomas Fielding, Representational State Transfer (REST), 2000  [https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm](https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
+
+
+[^REST_RESTFull]:Emmanuel Andrade, Entendendo as diferenças entre APIs REST e RESTful [https://www.dio.me/articles/entendendo-as-diferencas-entre-apis-rest-e-restful](https://www.dio.me/articles/entendendo-as-diferencas-entre-apis-rest-e-restful)
+
+
+[^Fetch]: MDN Web Docs Fetch API [https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+
+
+[^JSONPlaceholder]: JSONPlaceholder [https://jsonplaceholder.typicode.com/] (https://jsonplaceholder.typicode.com/)
