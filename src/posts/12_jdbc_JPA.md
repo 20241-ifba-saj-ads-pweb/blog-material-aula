@@ -261,7 +261,7 @@ public class Main {
                   version="3.0">
          <persistence-unit name="UserPU">
              <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-             <class>br.edu.ifba.saj.ads.pweb.User</class>
+             <class>br.edu.ifba.saj.ads.pweb.Usuario</class>
              <properties>
                  <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>
                  <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:file:./database/storage"/>
@@ -291,7 +291,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class User {
+public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -349,7 +349,7 @@ public class UserDAO {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
 
-        User user = new User();
+        Usuario user = new Usuario();
         user.setName(name);
         user.setEmail(email);
 
@@ -379,9 +379,9 @@ public class UserDAO {
 
     public void getUsers() {
         EntityManager em = emf.createEntityManager();
-        List<User> users = em.createQuery("SELECT u FROM User u", User.class).getResultList();
+        List<Usuario> users = em.createQuery("SELECT u FROM Usuario u", User.class).getResultList();
 
-        for (User user : users) {
+        for (Usuario user : users) {
             System.out.println("ID: " + user.getId() + ", Name: " + user.getName() + ", Email: " + user.getEmail());
         }
 
@@ -407,7 +407,7 @@ public class UserDAO {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
 
-        User user = em.find(User.class, id);  // Encontra o usuário pelo ID
+        Usuario user = em.find(Usuario.class, id);  // Encontra o usuário pelo ID
         if (user != null) {
             user.setName(name);
             user.setEmail(email);
@@ -440,7 +440,7 @@ public class UserDAO {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
 
-        User user = em.find(User.class, id);  // Encontra o usuário pelo ID
+        Usuario user = em.find(Usuario.class, id);  // Encontra o usuário pelo ID
         if (user != null) {
             em.remove(user);  // Remove o usuário do banco de dados
             em.getTransaction().commit();
@@ -555,7 +555,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class User {
+public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -605,23 +605,23 @@ public record UserDTO(int id, String name, String email) {}
 ```java
 package br.edu.ifba.saj.ads.pweb.mapper;
 
-import br.edu.ifba.saj.ads.pweb.model.User;
+import br.edu.ifba.saj.ads.pweb.model.Usuario;
 import br.edu.ifba.saj.ads.pweb.dto.UserDTO;
 
 public class UserMapper {
 
-    public static UserDTO toDTO(User user) {
+    public static UserDTO toDTO(Usuario user) {
         if (user == null) {
             return null;
         }
         return new UserDTO(user.getId(), user.getName(), user.getEmail());
     }
 
-    public static User toEntity(UserDTO userDTO) {
+    public static Usuario toEntity(UserDTO userDTO) {
         if (userDTO == null) {
             return null;
         }
-        User user = new User();
+        Usuario user = new Usuario();
         user.setId(userDTO.id());
         user.setName(userDTO.name());
         user.setEmail(userDTO.email());
@@ -638,10 +638,10 @@ O Spring Data JPA simplifica a criação do repositório. Basta criar uma interf
 ```java
 package br.edu.ifba.saj.ads.pweb.repository;
 
-import br.edu.ifba.saj.ads.pweb.model.User;
+import br.edu.ifba.saj.ads.pweb.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<User, Integer> {
+public interface UserRepository extends JpaRepository<Usuario, Integer> {
 }
 ```
 
@@ -652,7 +652,7 @@ package br.edu.ifba.saj.ads.pweb.service;
 
 import br.edu.ifba.saj.ads.pweb.dto.UserDTO;
 import br.edu.ifba.saj.ads.pweb.mapper.UserMapper;
-import br.edu.ifba.saj.ads.pweb.model.User;
+import br.edu.ifba.saj.ads.pweb.model.Usuario;
 import br.edu.ifba.saj.ads.pweb.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -667,8 +667,8 @@ public class UserService {
     private UserRepository userRepository;
 
     public UserDTO addUser(UserDTO userDTO) {
-        User user = UserMapper.toEntity(userDTO);
-        User savedUser = userRepository.save(user);
+        Usuario user = UserMapper.toEntity(userDTO);
+        Usuario savedUser = userRepository.save(user);
         return UserMapper.toDTO(savedUser);
     }
 
@@ -680,8 +680,8 @@ public class UserService {
 
     public UserDTO updateUser(UserDTO userDTO) {
         if (userRepository.existsById(userDTO.id())) {
-            User user = UserMapper.toEntity(userDTO);
-            User updatedUser = userRepository.save(user);
+            Usuario user = UserMapper.toEntity(userDTO);
+            Usuario updatedUser = userRepository.save(user);
             return UserMapper.toDTO(updatedUser);
         } else {
             return null;
