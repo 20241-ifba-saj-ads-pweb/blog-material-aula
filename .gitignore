@@ -3,3 +3,9 @@ node_modules/
 src/.vuepress/.cache/
 src/.vuepress/.temp/
 src/.vuepress/dist/
+src/includes/jdbc/target
+src/includes/jdbc/database
+src/includes/jpa/target
+src/includes/jpa/database
+src/includes/spring-data/target
+src/includes/spring-data/database
