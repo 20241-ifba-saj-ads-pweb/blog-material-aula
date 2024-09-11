@@ -1,4 +1,4 @@
-Um sistema ERP (Enterprise Resource Planning) é uma solução integrada que auxilia na gestão de processos empresariais, fornecendo uma visão unificada das atividades da empresa. Aqui estão 20 cadastros que geralmente fazem parte de um ERP robusto:
+Um sistema ERP (Enterprise Resource Planning) é uma solução integrada que auxilia na gestão de processos empresariais, fornecendo uma visão unificada das atividades da empresa. Aqui estão alguns cadastros que geralmente fazem parte de um ERP robusto:
 
 1. **Cadastro de Clientes**: Armazena informações sobre os clientes, como dados de contato, condições de pagamento, histórico de compras, entre outros.
 
