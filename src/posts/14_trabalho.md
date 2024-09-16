@@ -6,7 +6,6 @@ category:
 tag:
   - entrega
 order: 14
-article: false
 ---
 
 
