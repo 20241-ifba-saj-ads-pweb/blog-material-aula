@@ -27,3 +27,66 @@ article: false
 1. Plataforma de Aprendizado Online: Crie uma plataforma de cursos online com diferentes categorias de cursos, professores, alunos, sistema de inscrição e acompanhamento de progresso
 1. Sistema de Farmácia: Crie um sistema para gerenciar o estoque de medicamentos em uma farmácia. Inclua informações sobre medicamentos, fornecedores, lotes, validade e vendas
 1. Sistema de Lembrete de Remédios: Crie um sistema que ajuda os usuários a lembrarem de tomar seus medicamentos na hora certa. O sistema deve guardar informações sobre os remédios: nome, dosagem, frequência e horários. O sistema deve cadastrar as informações do perfil do usuário, os seus horários de medicamentos e informações médicas relevantes (registro de temperatura e pressão arterial). O sistema deve enviar lembretes: na hora de tomar cada medicamento, através de notificações, alarmes, etc. O sistema deve acompanha seus medicamentos com registros de quando você tomou as doses e pode identificar se você esqueceu alguma.
+
+
+### Barema de Avaliação (Total: 100 pontos)
+
+1. **Funcionalidades (50 pontos)**:
+   - **Implementação do CRUD (30 pontos)**: Operações de criação, leitura, atualização e exclusão corretamente implementadas.
+   - **Validações e Regras de Negócio (10 pontos)**: Aplicação correta de validações de campos e regras de negócio.
+   - **Cliente REST (10 pontos)**: Implementação de uma requisição a um serviço REST externo.
+
+2. **Arquitetura e Design (20 pontos)**:
+   - **Estrutura de Projeto (10 pontos)**: Utilização correta dos conceitos, organização de pacotes e classes.
+   - **Uso Adequado do Spring Boot/Quarkus (10 pontos)**: Configuração correta e boa utilização dos frameworks.
+
+3. **Qualidade de Código e Boas Práticas (15 pontos)**:
+   - **Clareza e Organização (8 pontos)**: Código bem estruturado, com comentários quando necessário.
+   - **Tratamento de Erros (7 pontos)**: Implementação de mecanismos adequados para tratamento de exceções e erros.
+
+4. **Persistência de Dados (10 pontos)**:
+   - **Configuração do Banco de Dados (5 pontos)**: Banco de dados corretamente configurado e conectado ao projeto.
+   - **Mapeamento de Entidades (5 pontos)**: Uso correto do JPA/Hibernate ou equivalente para o mapeamento de entidades.
+
+5. **Apresentação e Demonstração (5 pontos)**:
+   - **Demonstração da Aplicação (5 pontos)**: Apresentação clara do funcionamento do módulo implementado, com a execução das principais funcionalidades.
+
+
+
+
+
+7. **Cadastro de Planos de Contas**: Organiza e categoriza as contas contábeis da empresa, facilitando o controle e a análise financeira.
+
+8. **Cadastro de Condições de Pagamento**: Define as condições acordadas com clientes e fornecedores, como prazos, descontos e juros aplicáveis a pagamentos em atraso.
+
+9.  **Cadastro de Centro de Custos**: Classifica e organiza os custos e receitas por áreas ou departamentos da empresa, facilitando a análise financeira.
+
+10. **Cadastro de Contas Bancárias**: Registra todas as contas correntes e outras contas bancárias da empresa, com informações de agência, banco, número da conta e saldo.
+
+11. **Cadastro de Usuários do Sistema**: Gerencia as permissões e informações dos usuários que têm acesso ao ERP, incluindo papéis e níveis de permissão.
+
+12. **Cadastro de Tabelas de Preços**: Define diferentes faixas de preços para os produtos ou serviços, com variações baseadas em condições específicas, como quantidade ou clientes específicos.
+17. **Cadastro de Localizações de Estoque**: Define e organiza as diferentes localizações físicas de estoque dentro de armazéns, ajudando no controle e movimentação dos produtos.
+
+18. **Cadastro de Veículos**: Registra informações sobre veículos próprios ou terceirizados utilizados no transporte de mercadorias, incluindo manutenção e disponibilidade.
+
+19. **Cadastro de Contratos**: Armazena e gerencia contratos firmados com clientes, fornecedores ou parceiros, com detalhes como prazo, valor, e condições contratuais.
+
+20. **Cadastro de Projetos**: Organiza e gerencia projetos em andamento, atribuindo recursos, prazos e monitorando a execução de tarefas e atividades relacionadas.
+
+21. **Cadastro de Tabelas de Comissões**: Define as regras de comissionamento para vendedores ou representantes, com base em metas, vendas realizadas, produtos ou regiões.
+
+22. **Cadastro de Ativos Fixos**: Registra e gerencia os ativos permanentes da empresa, como máquinas, equipamentos, imóveis e veículos, incluindo informações sobre depreciação e manutenção.
+
+23. **Cadastro de Notas Fiscais**: Armazena e organiza as notas fiscais emitidas e recebidas pela empresa, facilitando o controle fiscal e o envio de informações para o governo.
+
+24. **Cadastro de Insumos**: Mantém o registro de insumos necessários para a produção de bens, como matérias-primas e componentes, permitindo um controle eficiente de estoque e produção.
+26. **Cadastro de Feriados e Jornadas de Trabalho**: Armazena informações sobre feriados e define as jornadas de trabalho dos colaboradores, facilitando o cálculo de folha de pagamento e escalas.
+
+27. **Cadastro de Licenças e Alvarás**: Registra as licenças e alvarás da empresa, com detalhes sobre validade, renovação e órgãos reguladores, garantindo conformidade legal.
+
+28. **Cadastro de Projetos de Investimento**: Armazena informações sobre projetos de investimento da empresa, com detalhes como orçamento, prazos, retorno esperado e fontes de financiamento.
+
+29. **Cadastro de Auditorias e Conformidade**: Registra auditorias internas e externas realizadas na empresa, com o objetivo de acompanhar a conformidade regulatória e processos de melhoria contínua.
+
+30. **Cadastro de Documentos Legais e Contratuais**: Organiza os documentos legais e contratuais da empresa, como escrituras, contratos sociais, certificados, entre outros, facilitando o controle e acesso rápido a informações críticas.
