@@ -58,7 +58,7 @@ Armazena informações sobre os clientes, como dados de contato, condições de 
 
 skinparam classFontColor automatic
 skinparam classHeaderBackgroundColor #444
-class Cliente {
+class Cliente #Technology{
     +Long id
     +String nome
     +TipoCliente tipoCliente
@@ -189,19 +189,12 @@ Inclui informações sobre os fornecedores da empresa, como dados de contato, co
       + String cargo
   }
 
-  class TipoEndereco <<enumeration>> {
-      RESIDENCIAL
-      COMERCIAL
-      FATURAMENTO
-      ENTREGA
-  }
-
   Fornecedor --> "1" Endereco : enderecoPrincipal
   Fornecedor --> "0..*" Endereco : enderecos
   Fornecedor --> "0..*" Contato : contatos
   Endereco --> "1" Fornecedor
   Contato -> "1" Fornecedor
-  TipoEndereco <- Endereco
+  
   @enduml
   ```
 
@@ -248,21 +241,11 @@ class Estoque #Technology{
     + String localizacao
 }
 
-class HistoricoPreco {
-    + Long id
-    + Produto produto
-    + Double precoAntigo
-    + Double precoNovo
-    + LocalDate dataAlteracao
-    + String usuarioResponsavel
-}
 
 Produto --> "1" CategoriaProduto : categoria
 Produto --> "0..*" Fornecedor : fornecedores
 Produto --> "1" Estoque : estoque
-Produto --> "0..*" HistoricoPreco : historicoPreco
 Estoque --> "1" Produto
-HistoricoPreco --> "1" Produto
 @enduml
 
 ```
@@ -307,10 +290,15 @@ class PrestadorServico {
     + List<Servico> servicosPrestados
 }
 
+class Funcionario #Business{
+
+}
+
 
 Servico --> "1" CategoriaServico : categoria
 Servico --> "0..*" PrestadorServico : prestadores
 PrestadorServico --> "0..*" Servico : servicosPrestados
+Servico --> Funcionario
 @enduml
 
 ```
@@ -366,23 +354,6 @@ class Endereco #Business{
     + String pais
 }
 
-class HistoricoSalario {
-    + Long id
-    + Funcionario funcionario
-    + Double salarioAntigo
-    + Double salarioNovo
-    + LocalDate dataAlteracao
-    + String usuarioResponsavel
-}
-
-class HistoricoCargo {
-    + Long id
-    + Funcionario funcionario
-    + Cargo cargoAntigo
-    + Cargo cargoNovo
-    + LocalDate dataAlteracao
-    + String usuarioResponsavel
-}
 
 Funcionario --> "1" Cargo : cargo
 Funcionario --> "1" Departamento : departamento
@@ -390,8 +361,6 @@ Funcionario --> "1" Endereco : endereco
 Funcionario --> "0..*" HistoricoSalario : historicoSalario
 Funcionario --> "0..*" HistoricoCargo : historicoCargo
 Departamento --> "1" Funcionario : gerente
-HistoricoSalario --> "1" Funcionario
-HistoricoCargo --> "1" Funcionario
 @enduml
 
 ```
@@ -486,6 +455,10 @@ class Tributacao #Technology{
     + LocalDate dataFim
 }
 
+class Produto #Business{
+
+}
+
 class TipoImposto <<enumeration>> {
     ICMS
     ISS
@@ -496,6 +469,7 @@ class TipoImposto <<enumeration>> {
 
 Imposto --> "0..*" Tributacao : tributacoes
 Tributacao --> "1" Imposto : imposto
+Tributacao --> Produto
 @enduml
 
 ```
@@ -786,3 +760,51 @@ RequisitoPromocao --> "1" Promocao : promocao
 - Arquivo README com instruções de como rodar o projeto e informações sobre as dependências.
   
 ## Prazo: 30/09/2024.
+
+## Equipes
+
+Cadastro de Clientes
+- Pedro Victor Hipólito Cabral (20222TADSSAJ0010)	
+- Adriano Victor Nascimento Ribeiro (20222TADSSAJ0024)	
+
+Cadastro de Fornecedores
+- Antônio Salgueiro Fernandes Neto (20222TADSSAJ0005)	
+- Filipe Ribeiro de Almeida Silva (20222TADSSAJ0004)	
+
+Cadastro de Produtos
+- Fabricio Luis de Sousa Santos (20201TADSSAJ0028)	
+- Jabes da Silva Cajazeira (20192TADSSAJ0014)	
+
+Cadastro de Serviços
+- Gustavo Vitor Oliveira de Andrade (20221TADSSAJ0003)	
+- João Augusto Moura Peixoto de Jesus (20211TADSSAJ0004)	
+
+Cadastro de Funcionários
+- Isaque Lima da Silva (20221TADSSAJ0010)	
+- Brenda Gabriela Martinez Araújo (20221TADSSAJ0001)	
+
+Cadastro de Transportadoras
+- Jaqueline Lima Andrade (20221TADSSAJ0007)	
+- Rafael Borges Magalhães (20221TADSSAJ0019)	
+
+Cadastro de Impostos e Tributações
+- João Gabriel de Deus Pinheiro (20212TADSSAJ0011)	
+- José Victor Oliveira dos Santos (20212TADSSAJ0008)	
+
+Cadastro de Pedidos de Venda
+- Kaio Sande Tavares (20222TADSSAJ0032)	
+- Tauynd Julia Silva Menezes (20222TADSSAJ0023)	
+
+
+Cadastro de Ordens de Compra
+- Luis Guilherme Passos Ramos (20222TADSSAJ0015)	
+- Nathaly de Jesus Brito (20222TADSSAJ0025)	
+
+Cadastro de Ordens de Produção
+- Luis Miguel de Jesus Oliveira (20211TADSSAJ0005)	
+- Matheus Lima Brazil Parenti (20221TADSSAJ0013)	
+
+Cadastro de Promoções e Descontos
+- Salvador Cerqueira Júnior (20212TADSSAJ0020)	
+- Rafhael da Silva Oliveira (20222TADSSAJ0026)	
+- Amanda Santos Lopes (20221TADSSAJ0009)	
