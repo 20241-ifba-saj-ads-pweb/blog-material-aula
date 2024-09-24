@@ -19,15 +19,10 @@ Quando falta inspiração, existem diversas plataformas e repositórios online q
 * **Qualidade:** Muitas opções gratuitas oferecem designs modernos, responsivos e bem estruturados, garantindo uma boa experiência do usuário.
 * **Diversidade:** Encontrar o template ideal para o seu projeto é fácil, pois existem diversas opções com estilos e funcionalidades variadas.
 
-https://themewagon.com/theme-category/admin-dashboard/
-
-https://adminlte.io/
-
-https://www.creative-tim.com/bootstrap-themes/free
-https://www.creative-tim.com/learning-lab/bootstrap/forms/argon-dashboard
-
-https://www.bootstrapdash.com/all-free-templates
-
-https://coreui.io/product/free-bootstrap-admin-template/
-
-https://themeselection.com/item/category/bootstrap-admin-templates/
+- [https://themewagon.com/theme-category/admin-dashboard/](https://themewagon.com/theme-category/admin-dashboard/)
+- [https://adminlte.io/](https://adminlte.io/)
+- [https://www.creative-tim.com/bootstrap-themes/free](https://www.creative-tim.com/bootstrap-themes/free)
+- [https://www.creative-tim.com/learning-lab/bootstrap/forms/argon-dashboard](https://www.creative-tim.com/learning-lab/bootstrap/forms/argon-dashboard)
+- [https://www.bootstrapdash.com/all-free-templates](https://www.bootstrapdash.com/all-free-templates)
+- [https://coreui.io/product/free-bootstrap-admin-template/](https://coreui.io/product/free-bootstrap-admin-template/)
+- [https://themeselection.com/item/category/bootstrap-admin-templates/](https://themeselection.com/item/category/bootstrap-admin-templates/)
